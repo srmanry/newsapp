@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
 
+import 'screens/view/first_screen.dart';
+
 // void main() {
 //   runApp(const MyApp());
 // }
@@ -29,7 +31,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const HomeScreen(),
+      //home: const HomeScreen(),
+      home: const FirstScreen(),
     );
   }
 }
