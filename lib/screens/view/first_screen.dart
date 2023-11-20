@@ -29,7 +29,7 @@ class FirstScreen extends StatelessWidget {
           //         ))),
           leading: IconButton(
               onPressed: () {
-                Get.to(const ProfileScreen());
+                Get.to(ProfileScreen());
               },
               icon: const Icon(
                 Icons.menu,
