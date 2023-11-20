@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
+import 'package:thakurgaonbarta/screens/view/newsditals.dart';
+
+import 'profilepage.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
@@ -9,8 +13,28 @@ class FirstScreen extends StatelessWidget {
     return DefaultTabController(
       length: 8,
       child: Scaffold(
-        drawer: const Drawer(),
+        //drawer: const Drawer(),
         appBar: AppBar(
+          // leading: Builder(
+          //     builder: (context) => IconButton(
+          //         onPressed: () {
+          //           // return Scaffold.of(context).openDrawer(
+
+          //           // );
+          //           Get.to(const NewsDitailsScreen());
+          //         },
+          //         icon: const Icon(
+          //           Icons.home,
+          //           color: Colors.white,
+          //         ))),
+          leading: IconButton(
+              onPressed: () {
+                Get.to(const ProfileScreen());
+              },
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.white,
+              )),
           centerTitle: true,
           backgroundColor: Colors.red,
           title: const Text(
@@ -40,8 +64,8 @@ class FirstScreen extends StatelessWidget {
               labelColor: Colors.white,
               // indicatorSize:,
               mouseCursor: SystemMouseCursors.allScroll,
-              overlayColor:
-                  MaterialStatePropertyAll(Color.fromARGB(255, 231, 62, 62)),
+              overlayColor: const MaterialStatePropertyAll(
+                  Color.fromARGB(255, 231, 62, 62)),
               //indicatorWeight: 10.0,
               // splashFactory: NoSplash.splashFactory,
               //labelPadding: EdgeInsets.all(1),
