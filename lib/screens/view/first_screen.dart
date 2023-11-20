@@ -26,8 +26,36 @@ class FirstScreen extends StatelessWidget {
               ),
             )
           ],
-          bottom: const TabBar(
-              labelColor: Colors.green,
+          bottom: TabBar(
+              splashBorderRadius: BorderRadius.circular(
+                20,
+              ),
+              labelStyle:
+                  const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              indicatorColor: Colors.black,
+
+              // indicator: BoxDecoration(
+              //     borderRadius: BorderRadius.circular(10),
+              //     color: Colors.white),
+              labelColor: Colors.white,
+              // indicatorSize:,
+              mouseCursor: SystemMouseCursors.allScroll,
+              overlayColor:
+                  MaterialStatePropertyAll(Color.fromARGB(255, 231, 62, 62)),
+              //indicatorWeight: 10.0,
+              // splashFactory: NoSplash.splashFactory,
+              //labelPadding: EdgeInsets.all(1),
+              physics: const BouncingScrollPhysics(),
+              unselectedLabelStyle: const TextStyle(
+                  // backgroundColor: Colors.amber,
+                  //fontStyle: FontStyle.italic,
+                  ),
+
+              //tabAlignment: AnimatedFractionallySizedBox(duration:Duration(20)),
+              unselectedLabelColor: Colors.black,
+              automaticIndicatorColorAdjustment: true,
+              dividerColor: Colors.amber,
+
               // indicatorColor: Colors.green,
               //indicatorWeight: 10.0,
               // splashBorderRadius: BorderRadius.all(Radius.circular()),
@@ -35,53 +63,45 @@ class FirstScreen extends StatelessWidget {
               //  labelColor: Colors.green,
               //indicatorPadding: EdgeInsets.all(20),
               isScrollable: true,
-              tabs: [
+              tabs: const [
                 Tab(
                   child: Text(
                     "স্বাস্থ্য",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "শিক্ষা",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "খেলাধুলা",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
                 Tab(
                   child: Text(
-                    "ধম",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                    "ধর্ম",
                   ),
                 ),
                 Tab(
                   child: Text(
                     "রাজনীতি",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
                 Tab(
                   child: Text(
-                    "বাজার",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                    "ক্রয় বিক্রয়",
                   ),
                 ),
                 Tab(
                   child: Text(
                     "তথ্য প্রযুক্তি",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "আন্তজাতীক",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
               ]),
