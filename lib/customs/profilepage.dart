@@ -20,7 +20,8 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Container(
               height: 200,
-              color: Colors.red,
+              color: const Color(0xfffEEF2FD),
+              //color: Colors.red,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
