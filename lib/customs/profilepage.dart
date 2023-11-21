@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../screens/view/login/register_screen.dart';
 import '../screens/view/login/sign_screen.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -63,14 +64,19 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
             ),
-            ListTile(
-              // leading: Icon(
-              //   Icons.login,
-              //   color: Colors.red,
-              // ),
-              title: Text(
-                "Signup",
-                style: listTextstyle,
+            InkWell(
+              onTap: () {
+                Get.to(const RegisterScreen());
+              },
+              child: ListTile(
+                // leading: Icon(
+                //   Icons.login,
+                //   color: Colors.red,
+                // ),
+                title: Text(
+                  "Signup",
+                  style: listTextstyle,
+                ),
               ),
             ),
             Padding(

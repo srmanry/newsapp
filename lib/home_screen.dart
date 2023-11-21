@@ -55,52 +55,78 @@ class HomeScreen extends StatelessWidget {
                   itemCount: 20,
                   itemBuilder: (_, index) {
                     return Card(
-                      elevation: 10,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'হরতাল ঘিরে সারাদেশে ১১ যানবাহনে আগুন',
-                              style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.red),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 8.0, bottom: 10.0),
-                              child: Text(
-                                "বিভিন্ন জেলায় এসব যানবাহনে অগ্নিসংযোগ করা হয়",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
+                      child: Container(
+                        height: 100,
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              Container(
+                                // height: 100,
+                                width: 120,
+                                decoration:
+                                    const BoxDecoration(color: Colors.white),
+                                child: Image.asset(
+                                  'assets/images/hortal.jpg',
+                                  height: 150,
+                                  // fit: BoxFit.contain,
                                 ),
                               ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Text(
-                                  "10/02/2024",
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // const Text(
+                                    //   'হরতাল ঘিরে সারাদেশে ১১ যানবাহনে আগুন',
+                                    //   style: TextStyle(
+                                    //       fontSize: 16,
+                                    //       fontWeight: FontWeight.bold,
+                                    //       color: Colors.red),
+                                    // ),
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                          top: 8.0, bottom: 10.0),
+                                      child: Text(
+                                        "বিভিন্ন জেলায় এসব যানবাহনে অগ্নিসংযোগ করা হয়",
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        const Text(
+                                          "10/02/2024",
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.bold,
+                                              fontStyle: FontStyle.italic),
+                                        ),
+                                        // TextButton(
+                                        //     onPressed: () {
+                                        //       Get.to(const NewsDitailsScreen());
+                                        //     },
+                                        //     child: const Text(
+                                        //       'Read More',
+                                        //       style: TextStyle(
+                                        //           fontSize: 18,
+                                        //           fontWeight: FontWeight.bold),
+                                        //     )),
+                                      ],
+                                    )
+                                  ],
                                 ),
-                                TextButton(
-                                    onPressed: () {
-                                      Get.to(const NewsDitailsScreen());
-                                    },
-                                    child: const Text(
-                                      'Read More',
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
-                                    )),
-                              ],
-                            )
-                          ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     );

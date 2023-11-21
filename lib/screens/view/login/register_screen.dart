@@ -70,13 +70,20 @@ class RegisterScreen extends StatelessWidget {
                     height: 10,
                   ),
                   const CustomTextfild(
-                    hinText: "Email",
-                    prifixIcon: Icon(Icons.email_outlined),
+                    //focusColor: Colors.red,
+                    hinText: "name",
+                    prifixIcon: Icon(Icons.person),
                   ),
-                  const SizedBox(
-                    height: 8.0,
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5.0),
+                    child: CustomTextfild(
+                      // focusColor: Colors.red,
+                      hinText: "Email",
+                      prifixIcon: Icon(Icons.email_outlined),
+                    ),
                   ),
                   const CustomTextfild(
+                    //focusColor: Colors.red,
                     hinText: "Email",
                     prifixIcon: Icon(Icons.visibility),
                   ),

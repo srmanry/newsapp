@@ -13,40 +13,47 @@ class FirstScreen extends StatelessWidget {
     return DefaultTabController(
       length: 8,
       child: Scaffold(
-        //drawer: const Drawer(),
+        //  drawer: const Drawer(),
         appBar: AppBar(
+          // elevation: 100,
           // leading: Builder(
           //     builder: (context) => IconButton(
           //         onPressed: () {
-          //           // return Scaffold.of(context).openDrawer(
+          //            return Scaffold.of(context).openDrawer(
 
-          //           // );
+          //            );
           //           Get.to(const NewsDitailsScreen());
           //         },
           //         icon: const Icon(
           //           Icons.home,
           //           color: Colors.white,
           //         ))),
+
+          //*****************************
           leading: IconButton(
               onPressed: () {
                 Get.to(ProfileScreen());
               },
               icon: const Icon(
                 Icons.menu,
-                color: Colors.white,
+                color: Colors.black,
               )),
+
           centerTitle: true,
-          backgroundColor: Colors.red,
+          //backgroundColor: Colors.white,
+          // backgroundColor: Colors.red,
+          backgroundColor: Color(0xfffEEF2FD),
+          //   backgroundColor: const Color(0xfffF0F7FF),
           title: const Text(
             "ঠাকুরগাঁও বার্তা",
-            style: TextStyle(fontSize: 24, color: Colors.white),
+            style: TextStyle(fontSize: 24, color: Colors.green),
           ),
           actions: const [
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Icon(
                 Icons.search,
-                color: Colors.white,
+                color: Colors.black,
               ),
             )
           ],
@@ -61,11 +68,10 @@ class FirstScreen extends StatelessWidget {
               // indicator: BoxDecoration(
               //     borderRadius: BorderRadius.circular(10),
               //     color: Colors.white),
-              labelColor: Colors.white,
+              labelColor: Colors.green,
               // indicatorSize:,
               mouseCursor: SystemMouseCursors.allScroll,
-              overlayColor: const MaterialStatePropertyAll(
-                  Color.fromARGB(255, 231, 62, 62)),
+              overlayColor: const MaterialStatePropertyAll(Colors.white),
               //indicatorWeight: 10.0,
               // splashFactory: NoSplash.splashFactory,
               //labelPadding: EdgeInsets.all(1),
@@ -78,7 +84,7 @@ class FirstScreen extends StatelessWidget {
               //tabAlignment: AnimatedFractionallySizedBox(duration:Duration(20)),
               unselectedLabelColor: Colors.black,
               automaticIndicatorColorAdjustment: true,
-              dividerColor: Colors.amber,
+              // dividerColor: Colors.amber,
 
               // indicatorColor: Colors.green,
               //indicatorWeight: 10.0,

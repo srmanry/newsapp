@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/customs/custom_textfild.dart';
-import 'package:thakurgaonbarta/screens/view/login/login_screen.dart';
+import 'package:thakurgaonbarta/screens/view/login/register_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   SignInScreen({super.key});
@@ -13,11 +13,18 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.maxFinite,
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-          Color.fromARGB(255, 240, 227, 226),
-          Colors.white,
-        ], end: Alignment.topCenter, begin: Alignment.center)),
+        color: Color(0xfffEEF2FD),
+        // color: const Color(0xfffF0F7FF),
+        // color: Color(0xfffABE5CF),
+        // color: Color(0xfffF0F7FF),
+        //color: Color(0xfffC5E1F6),
+        //color: Color(0xfffE24F96),
+        //color: Color(0xfffEAB1CC),
+        // decoration: const BoxDecoration(
+        //     gradient: LinearGradient(colors: [
+        //   Color.fromARGB(255, 240, 227, 226),
+        //   Colors.white,
+        // ], end: Alignment.topCenter, begin: Alignment.center)),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Center(
@@ -29,7 +36,7 @@ class SignInScreen extends StatelessWidget {
                   const SizedBox(
                       // height: 250,
                       ),
-                  Image.asset("assets/images/barta.png",
+                  Image.asset("assets/images/login.png",
                       width: 200, fit: BoxFit.cover),
                   // const Spacer(),
                   // const Text(
@@ -40,19 +47,19 @@ class SignInScreen extends StatelessWidget {
                     height: 20,
                   ),
                   const CustomTextfild(
+                    focusColor: Colors.red,
                     hinText: "Email",
                     prifixIcon: Icon(Icons.email_outlined),
                   ),
                   const SizedBox(
-                    height: 8.0,
+                    height: 3.0,
                   ),
                   const CustomTextfild(
-                    hinText: "Email",
+                    hinText: "Password",
                     prifixIcon: Icon(Icons.visibility),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 8.0, horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -81,20 +88,23 @@ class SignInScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    height: 45,
-                    // width: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.teal),
-                    child: const Center(
-                        child: Text(
-                      "Login",
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Container(
+                      height: 45,
+                      // width: 200,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: const Color(0xFFF13414D)),
+                      child: const Center(
+                          child: Text(
+                        "Login",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      )),
+                    ),
                   ),
                 ],
               ),

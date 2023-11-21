@@ -7,6 +7,7 @@ class CustomTextfild extends StatelessWidget {
   final Widget? suffixIcon;
   final TextInputType? textInputType;
   final bool? obscureCharacter;
+  final Color? focusColor;
   final Widget? outlineborder;
 
   const CustomTextfild(
@@ -17,36 +18,47 @@ class CustomTextfild extends StatelessWidget {
       this.controller,
       this.textInputType,
       this.obscureCharacter,
-      this.outlineborder});
+      this.outlineborder,
+      this.focusColor});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: TextFormField(
-        controller: controller,
-        keyboardType: textInputType,
-        decoration: InputDecoration(
-            fillColor: Colors.white,
-            focusColor: Colors.white,
+      child: Container(
+        height: 45,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
+        ),
+        child: TextFormField(
+          controller: controller,
+          keyboardType: textInputType,
+          decoration: InputDecoration(
+            focusColor: focusColor,
+            fillColor: Colors.green,
+            //  focusColor: Colors.white,
             // hoverColor: Colors.white,
             hintText: hinText,
             hintStyle: const TextStyle(fontSize: 14),
             prefixIcon: prifixIcon,
             suffixIcon: suffixIcon,
             iconColor: Colors.black,
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.0),
-              borderSide: const BorderSide(
-                color: Colors.green,
-                width: 1.0,
-              ),
-            ),
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.green,
-              ),
-            )),
+            border: InputBorder.none,
+            // enabledBorder: OutlineInputBorder(
+            //   //borderRadius: BorderRadius.circular(10.0),
+            //   borderSide: const BorderSide(
+            //     color: Colors.white,
+            //     width: 0.0,
+            //   ),
+            // ),
+            // focusedBorder: const OutlineInputBorder(
+            //   borderSide: BorderSide(
+            //     color: Colors.white,
+            // ),
+            //)
+          ),
+        ),
       ),
     );
   }
