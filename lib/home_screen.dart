@@ -54,10 +54,23 @@ class HomeScreen extends StatelessWidget {
               child: ListView.builder(
                   itemCount: 20,
                   itemBuilder: (_, index) {
-                    return Card(
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 8.0),
                       child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(5),
+                            //shape: BoxShape.circle
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0xffDDDDDD),
+                                blurRadius: 6.0,
+                                spreadRadius: 2.0,
+                                offset: Offset(0.0, 0.0),
+                              ),
+                            ]),
                         height: 100,
-                        color: Colors.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
@@ -67,16 +80,19 @@ class HomeScreen extends StatelessWidget {
                                 width: 120,
                                 decoration:
                                     const BoxDecoration(color: Colors.white),
-                                child: Image.asset(
-                                  'assets/images/hortal.jpg',
-                                  height: 150,
-                                  // fit: BoxFit.contain,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(5),
+                                  child: Image.asset(
+                                    'assets/images/hortal.jpg',
+                                    //height: 150,
+                                    // fit: BoxFit.contain,
+                                  ),
                                 ),
                               ),
                               const SizedBox(
                                 width: 10,
                               ),
-                              Expanded(
+                              const Expanded(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                                     //       fontWeight: FontWeight.bold,
                                     //       color: Colors.red),
                                     // ),
-                                    const Padding(
+                                    Padding(
                                       padding: EdgeInsets.only(
                                           top: 8.0, bottom: 10.0),
                                       child: Text(
@@ -103,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        const Text(
+                                        Text(
                                           "10/02/2024",
                                           style: TextStyle(
                                               fontSize: 12,

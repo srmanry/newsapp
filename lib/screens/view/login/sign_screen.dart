@@ -36,8 +36,10 @@ class SignInScreen extends StatelessWidget {
                   const SizedBox(
                       // height: 250,
                       ),
-                  Image.asset("assets/images/login.png",
-                      width: 200, fit: BoxFit.cover),
+                  Image.asset(
+                    "assets/images/login.png",
+                    width: 200,
+                  ),
                   // const Spacer(),
                   // const Text(
                   //   "Wellcome To Thakurgaon Barta",

@@ -46,7 +46,8 @@ class FirstScreen extends StatelessWidget {
           //   backgroundColor: const Color(0xfffF0F7FF),
           title: const Text(
             "ঠাকুরগাঁও বার্তা",
-            style: TextStyle(fontSize: 24, color: Colors.green),
+            style: TextStyle(
+                fontSize: 24, color: Colors.red, fontWeight: FontWeight.bold),
           ),
           actions: const [
             Padding(
