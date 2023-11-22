@@ -101,41 +101,49 @@ class FirstScreen extends StatelessWidget {
                 Tab(
                   child: Text(
                     "স্বাস্থ্য",
+                    style: TextStyle(fontFamily: 'HindSiliguri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "শিক্ষা",
+                    style: TextStyle(fontFamily: 'HindSiliguri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "খেলাধুলা",
+                    style: TextStyle(fontFamily: 'HindSiliguri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "ধর্ম",
+                    style: TextStyle(fontFamily: 'HindSiliguri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "রাজনীতি",
+                    style: TextStyle(fontFamily: 'HindSiliguri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "ক্রয় বিক্রয়",
+                    style: TextStyle(fontFamily: 'HindSiliguri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "তথ্য প্রযুক্তি",
+                    style: TextStyle(fontFamily: 'HindSiliguri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "আন্তজাতীক",
+                    style: TextStyle(fontFamily: 'HindSiliguri'),
                   ),
                 ),
               ]),
