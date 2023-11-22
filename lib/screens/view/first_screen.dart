@@ -65,8 +65,10 @@ class FirstScreen extends StatelessWidget {
               splashBorderRadius: BorderRadius.circular(
                 20,
               ),
-              labelStyle:
-                  const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              labelStyle: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.5),
               indicatorColor: Colors.black,
 
               // indicator: BoxDecoration(
@@ -101,49 +103,49 @@ class FirstScreen extends StatelessWidget {
                 Tab(
                   child: Text(
                     "স্বাস্থ্য",
-                    style: TextStyle(fontFamily: 'HindSiliguri'),
+                    style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "শিক্ষা",
-                    style: TextStyle(fontFamily: 'HindSiliguri'),
+                    style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "খেলাধুলা",
-                    style: TextStyle(fontFamily: 'HindSiliguri'),
+                    style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "ধর্ম",
-                    style: TextStyle(fontFamily: 'HindSiliguri'),
+                    style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "রাজনীতি",
-                    style: TextStyle(fontFamily: 'HindSiliguri'),
+                    style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "ক্রয় বিক্রয়",
-                    style: TextStyle(fontFamily: 'HindSiliguri'),
+                    style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "তথ্য প্রযুক্তি",
-                    style: TextStyle(fontFamily: 'HindSiliguri'),
+                    style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "আন্তজাতীক",
-                    style: TextStyle(fontFamily: 'HindSiliguri'),
+                    style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
               ]),
