@@ -112,6 +112,8 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold,
+                                          fontFamily: "TiroBangla-Regular",
+                                          // fontFamily: "NotoSansBengali",
                                         ),
                                       ),
                                     ),

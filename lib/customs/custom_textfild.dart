@@ -35,29 +35,28 @@ class CustomTextfild extends StatelessWidget {
           controller: controller,
           keyboardType: textInputType,
           decoration: InputDecoration(
-            focusColor: focusColor,
-            fillColor: Colors.green,
-            //  focusColor: Colors.white,
-            // hoverColor: Colors.white,
-            hintText: hinText,
-            hintStyle: const TextStyle(fontSize: 14),
-            prefixIcon: prifixIcon,
-            suffixIcon: suffixIcon,
-            iconColor: Colors.black,
-            border: InputBorder.none,
-            // enabledBorder: OutlineInputBorder(
-            //   //borderRadius: BorderRadius.circular(10.0),
-            //   borderSide: const BorderSide(
-            //     color: Colors.white,
-            //     width: 0.0,
-            //   ),
-            // ),
-            // focusedBorder: const OutlineInputBorder(
-            //   borderSide: BorderSide(
-            //     color: Colors.white,
-            // ),
-            //)
-          ),
+              focusColor: focusColor,
+              fillColor: Colors.green,
+              //  focusColor: Colors.white,
+              // hoverColor: Colors.white,
+              hintText: hinText,
+              hintStyle: const TextStyle(fontSize: 14),
+              prefixIcon: prifixIcon,
+              suffixIcon: suffixIcon,
+              iconColor: Colors.black,
+              border: InputBorder.none,
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: const BorderSide(
+                  color: Colors.white,
+                  width: 0.0,
+                ),
+              ),
+              focusedBorder: const OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.white,
+                ),
+              )),
         ),
       ),
     );
