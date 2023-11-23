@@ -74,7 +74,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Get.to(const RegisterScreen());
+                            Get.to(RegisterScreen());
                           },
                           child: const Text(
                             "Sign Up",

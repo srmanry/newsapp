@@ -72,7 +72,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Get.to(const RegisterScreen());
+                Get.to(RegisterScreen());
               },
               child: ListTile(
                 // leading: Icon(

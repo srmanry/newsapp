@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:thakurgaonbarta/controller/register_controller.dart';
 
 import '../../../customs/custom_textfild.dart';
 
 class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+  RegisterScreen({super.key});
+  RegisterController controller = Get.put(RegisterController());
 
   @override
   Widget build(BuildContext context) {
@@ -63,41 +65,50 @@ class RegisterScreen extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const CustomTextfild(
+                CustomTextfild(
                   //focusColor: Colors.red,
+                  controller: controller.nameController,
                   hinText: "name",
-                  prifixIcon: Icon(Icons.person),
+                  prifixIcon: const Icon(Icons.person),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5.0),
                   child: CustomTextfild(
+                    controller: controller.gmailController,
                     // focusColor: Colors.red,
                     hinText: "Email",
-                    prifixIcon: Icon(Icons.email_outlined),
+                    prifixIcon: const Icon(Icons.email_outlined),
                   ),
                 ),
-                const CustomTextfild(
+                CustomTextfild(
+                  controller: controller.passwordController,
                   //focusColor: Colors.red,
-                  hinText: "Email",
-                  prifixIcon: Icon(Icons.visibility),
+                  hinText: "Password",
+                  prifixIcon: const Icon(Icons.visibility),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  height: 45,
-                  // width: 200,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color(0xFF13414D)),
-                  child: const Center(
-                      child: Text(
-                    "Register",
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  )),
+                InkWell(
+                  onTap: () {
+                    controller.uesrRegisterApi();
+                    print("register");
+                  },
+                  child: Container(
+                    height: 45,
+                    // width: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color(0xFF13414D)),
+                    child: const Center(
+                        child: Text(
+                      "Register",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    )),
+                  ),
                 ),
               ],
             ),
