@@ -20,9 +20,11 @@ class CustomBottom extends StatelessWidget {
       width: double.maxFinite,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(7),
       ),
-      child: Center(child: text,),
+      child: Center(
+        child: text,
+      ),
     );
   }
 }
