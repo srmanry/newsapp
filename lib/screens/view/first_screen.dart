@@ -50,6 +50,7 @@ class FirstScreen extends StatelessWidget {
               fontSize: 24, color: Colors.red,
               //fontFamily: "NotoSansBengali"
               fontFamily: "Galada-Regular",
+              fontStyle: FontStyle.normal,
             ),
           ),
           actions: const [
@@ -90,14 +91,6 @@ class FirstScreen extends StatelessWidget {
               //tabAlignment: AnimatedFractionallySizedBox(duration:Duration(20)),
               unselectedLabelColor: Colors.black,
               automaticIndicatorColorAdjustment: true,
-              // dividerColor: Colors.amber,
-
-              // indicatorColor: Colors.green,
-              //indicatorWeight: 10.0,
-              // splashBorderRadius: BorderRadius.all(Radius.circular()),
-
-              //  labelColor: Colors.green,
-              //indicatorPadding: EdgeInsets.all(20),
               isScrollable: true,
               tabs: const [
                 Tab(

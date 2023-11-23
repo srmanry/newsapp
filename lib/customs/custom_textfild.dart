@@ -28,9 +28,15 @@ class CustomTextfild extends StatelessWidget {
       child: Container(
         height: 45,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Colors.white,
-        ),
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white,
+            boxShadow: const [
+              BoxShadow(
+                  color: Colors.white,
+                  blurRadius: 1,
+                  //blurStyle: BlurStyle.inner,
+                  spreadRadius: 1)
+            ]),
         child: TextFormField(
           controller: controller,
           keyboardType: textInputType,
