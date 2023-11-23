@@ -89,6 +89,9 @@ flutter:
     - family: Paapri
       fonts:
         - asset: assets/fonts/Paapri.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

@@ -18,50 +18,55 @@ class CreatePostscreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         centerTitle: true,
         title:
-            Text("Create News", style: hedartext.copyWith(color: Colors.red)),
+            Text("Create News", style: hedartext.copyWith(color: Colors.black)),
       ),
-      body: Column(
-        children: [
-          Expanded(
-              child: ListView(
-            children: [
-              Container(
-                height: 200,
-                color: Colors.amber,
-                child: const Center(
-                  child: Text("create post"),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          children: [
+            Expanded(
+                child: ListView(
+              children: [
+                Container(
+                  height: 200,
+                  color: Colors.amber,
+                  child: const Center(
+                    child: Text("create post"),
+                  ),
                 ),
-              ),
-              const TextField(
-                decoration: InputDecoration(border: InputBorder.none),
-                maxLines: 20,
-                //decoration: InputDecoration(),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-            ],
-          )),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 10,
-              ),
-              child: CustomBottom(
-                text: Text(
-                  "Post News",
-                  style: bottontext.copyWith(color: Colors.white),
-                  // selectionColor: Colors.amber,
+                const TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none, hintText: "Discription"),
+
+                  maxLines: 20,
+                  //decoration: InputDecoration(),
                 ),
-                color: const Color(0xFF13414D),
+                const SizedBox(
+                  height: 20,
+                ),
+              ],
+            )),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+                child: CustomBottom(
+                  text: Text(
+                    "Post News",
+                    style: bottontext.copyWith(color: Colors.white),
+                    // selectionColor: Colors.amber,
+                  ),
+                  color: const Color(0xFF13414D),
+                ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          )
-        ],
+            const SizedBox(
+              height: 20,
+            )
+          ],
+        ),
       ),
     );
   }
