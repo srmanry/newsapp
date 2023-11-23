@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
 
-import 'screens/view/first_screen.dart';
+import 'cetagorys/first_screen.dart';
 
 // void main() {
 //   runApp(const MyApp());

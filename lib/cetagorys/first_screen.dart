@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
-import 'package:thakurgaonbarta/screens/view/newsditals.dart';
+import 'package:thakurgaonbarta/screens/view/post/ditals_post.dart';
 
-import '../../customs/drawer_screen.dart';
+import '../customs/drawer_screen.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
@@ -42,7 +42,7 @@ class FirstScreen extends StatelessWidget {
           centerTitle: true,
           //backgroundColor: Colors.white,
           // backgroundColor: Colors.red,
-          backgroundColor: Color(0xfffEEF2FD),
+          backgroundColor: const Color(0xfffeef2fd),
           //   backgroundColor: const Color(0xfffF0F7FF),
           title: const Text(
             "ঠাকুরগাঁও বার্তা",

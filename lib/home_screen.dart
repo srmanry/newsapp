@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:thakurgaonbarta/screens/view/newsditals.dart';
+import 'package:thakurgaonbarta/screens/view/post/ditals_post.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -97,13 +97,6 @@ class HomeScreen extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // const Text(
-                                    //   'হরতাল ঘিরে সারাদেশে ১১ যানবাহনে আগুন',
-                                    //   style: TextStyle(
-                                    //       fontSize: 16,
-                                    //       fontWeight: FontWeight.bold,
-                                    //       color: Colors.red),
-                                    // ),
                                     Padding(
                                       padding: EdgeInsets.only(
                                           top: 8.0, bottom: 10.0),
