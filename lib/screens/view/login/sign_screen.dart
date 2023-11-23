@@ -97,7 +97,7 @@ class SignInScreen extends StatelessWidget {
                       // width: 200,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: const Color(0xFFF13414D)),
+                          color: const Color(0xFF13414D)),
                       child: const Center(
                           child: Text(
                         "Login",

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../screens/view/login/register_screen.dart';
 import '../screens/view/login/sign_screen.dart';
+import '../screens/view/post/create_postScreen.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -11,7 +12,11 @@ class ProfileScreen extends StatelessWidget {
   Color? color;
   ProfileScreen({super.key, this.listtile, this.icons, this.color});
   var listTextstyle = const TextStyle(
-      fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black);
+    fontSize: 16,
+    //fontWeight: FontWeight.bold,
+    color: Colors.black,
+    //fontFamily: "TiroBangla"
+  );
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -95,6 +100,21 @@ class ProfileScreen extends StatelessWidget {
                     "Login",
                     style: listTextstyle,
                   ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Get.to(const CreatePostscreen());
+              },
+              child: ListTile(
+                // leading: Icon(
+                //   Icons.login,
+                //   color: Colors.red,
+                // ),
+                title: Text(
+                  "Create post",
+                  style: listTextstyle,
                 ),
               ),
             ),

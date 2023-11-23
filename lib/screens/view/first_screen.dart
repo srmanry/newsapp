@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
 import 'package:thakurgaonbarta/screens/view/newsditals.dart';
 
-import '../../customs/profilepage.dart';
+import '../../customs/drawer_screen.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
