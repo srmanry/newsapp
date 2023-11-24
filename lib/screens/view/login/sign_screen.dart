@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:thakurgaonbarta/controller/login_controller.dart';
 import 'package:thakurgaonbarta/customs/custom_textfild.dart';
 import 'package:thakurgaonbarta/screens/view/login/register_screen.dart';
 
@@ -7,7 +8,7 @@ class SignInScreen extends StatelessWidget {
   SignInScreen({super.key});
   var textStyle = const TextStyle(
       fontSize: 18, fontWeight: FontWeight.bold, color: Colors.red);
-
+  Logincontroller loginContrller = Get.put(Logincontroller());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,17 +49,19 @@ class SignInScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const CustomTextfild(
+                  CustomTextfild(
+                    controller: loginContrller.emailcontroller,
                     focusColor: Colors.red,
                     hinText: "Email",
-                    prifixIcon: Icon(Icons.email_outlined),
+                    prifixIcon: const Icon(Icons.email_outlined),
                   ),
                   const SizedBox(
                     height: 3.0,
                   ),
-                  const CustomTextfild(
+                  CustomTextfild(
+                    controller: loginContrller.passwordcontroller,
                     hinText: "Password",
-                    prifixIcon: Icon(Icons.visibility),
+                    prifixIcon: const Icon(Icons.visibility),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -92,20 +95,26 @@ class SignInScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Container(
-                      height: 45,
-                      // width: 200,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: const Color(0xFF13414D)),
-                      child: const Center(
-                          child: Text(
-                        "Login",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      )),
+                    child: InkWell(
+                      onTap: () {
+                        loginContrller.uesrloginApi();
+                        print("Login botton");
+                      },
+                      child: Container(
+                        height: 45,
+                        // width: 200,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: const Color(0xFF13414D)),
+                        child: const Center(
+                            child: Text(
+                          "Login",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        )),
+                      ),
                     ),
                   ),
                 ],

@@ -23,7 +23,7 @@ class RegisterController extends GetxController {
       );
       var data = jsonDecode(response.body);
       print(response.statusCode);
-      print(data);
+
       print(response);
       if (response.statusCode == 201) {
         Get.snackbar("Register Sucess", "Congratulations",
