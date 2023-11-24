@@ -22,21 +22,21 @@ class RegisterController extends GetxController {
         },
       );
       var data = jsonDecode(response.body);
-      print(response.statusCode);
 
-      print(response);
       if (response.statusCode == 201) {
         Get.snackbar("Register Sucess", "Congratulations",
-            backgroundColor: Colors.red);
+            backgroundColor: const Color.fromARGB(255, 191, 228, 192));
 
         Get.to(const FirstScreen());
       } else {
-        Get.snackbar("Please try agin", "Not create account");
+        Get.snackbar("Please try agin", "Not create account",
+            backgroundColor: const Color.fromARGB(255, 236, 178, 174));
       }
 
       {}
     } catch (e) {
-      Get.snackbar("Please try agin", "Have a problem");
+      Get.snackbar("Please try agin", "Have a problem",
+          backgroundColor: const Color.fromARGB(255, 236, 178, 174));
     }
   }
 }

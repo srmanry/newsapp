@@ -85,21 +85,18 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: InkWell(
-                onTap: () {
-                  Get.to(SignInScreen());
-                },
-                child: ListTile(
-                  // leading: Icon(
-                  //   Icons.login,
-                  //   color: Colors.red,
-                  // ),
-                  title: Text(
-                    "Login",
-                    style: listTextstyle,
-                  ),
+            InkWell(
+              onTap: () {
+                Get.to(SignInScreen());
+              },
+              child: ListTile(
+                // leading: Icon(
+                //   Icons.login,
+                //   color: Colors.red,
+                // ),
+                title: Text(
+                  "Login",
+                  style: listTextstyle,
                 ),
               ),
             ),
