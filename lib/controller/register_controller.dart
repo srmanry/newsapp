@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,8 +31,6 @@ class RegisterController extends GetxController {
         Get.snackbar("Please try agin", "Not create account",
             backgroundColor: const Color.fromARGB(255, 236, 178, 174));
       }
-
-      {}
     } catch (e) {
       Get.snackbar("Please try agin", "Have a problem",
           backgroundColor: const Color.fromARGB(255, 236, 178, 174));
