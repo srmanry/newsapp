@@ -7,7 +7,8 @@ class ViewYourpost extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: const [
+        children: [
+          TextButton(onPressed: () {}, child: Text("ROUT")),
           Text("View your post"),
         ],
       ),

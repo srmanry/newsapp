@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:thakurgaonbarta/routes/app_pages.dart';
 
 import '../screens/login/register_screen.dart';
 import '../screens/login/sign_screen.dart';
@@ -72,7 +73,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Get.to(RegisterScreen());
+                Get.toNamed(Routes.LOGIN_VIEW);
               },
               child: ListTile(
                 // leading: Icon(
@@ -87,7 +88,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Get.to(SignInScreen());
+                Get.toNamed(Routes.LOGIN_VIEW);
               },
               child: ListTile(
                 // leading: Icon(
