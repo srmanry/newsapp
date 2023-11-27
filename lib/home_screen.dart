@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:thakurgaonbarta/screens/post/ditals_post.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

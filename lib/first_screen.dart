@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
-import 'package:thakurgaonbarta/screens/view/post/ditals_post.dart';
+import 'package:thakurgaonbarta/screens/post/ditals_post.dart';
 
 import '../customs/drawer_screen.dart';
 
@@ -13,7 +13,7 @@ class FirstScreen extends StatelessWidget {
     return DefaultTabController(
       length: 8,
       child: Scaffold(
-        backgroundColor: const Color(0xffECECEC),
+        backgroundColor: const Color(0xffECECEC), 
         //  drawer: const Drawer(),
         appBar: AppBar(
           // elevation: 100,

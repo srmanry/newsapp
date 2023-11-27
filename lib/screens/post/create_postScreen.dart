@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:thakurgaonbarta/customs/custom_textfild.dart';
-import 'package:thakurgaonbarta/style/colorstyle.dart';
+import 'package:thakurgaonbarta/screens/style/colorstyle.dart';
 
-import 'package:thakurgaonbarta/style/textstyle.dart';
+import 'package:thakurgaonbarta/screens/style/textstyle.dart';
 
-import '../../../customs/custom_bottom.dart';
+import '../../customs/custom_bottom.dart';
 
 class CreatePostscreen extends StatelessWidget {
   const CreatePostscreen({super.key});

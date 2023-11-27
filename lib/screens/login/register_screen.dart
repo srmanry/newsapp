@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:thakurgaonbarta/controller/register_controller.dart';
+import 'package:thakurgaonbarta/controller/login_controller/register_controller.dart';
 
-import '../../../customs/custom_textfild.dart';
+import '../../customs/custom_textfild.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});

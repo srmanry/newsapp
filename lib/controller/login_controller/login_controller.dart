@@ -3,7 +3,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
-import 'package:thakurgaonbarta/cetagorys/first_screen.dart';
+import 'package:thakurgaonbarta/first_screen.dart';
+import 'package:thakurgaonbarta/routes/app_pages.dart';
+import 'package:thakurgaonbarta/screens/login/register_screen.dart';
 
 class Logincontroller extends GetxController {
   final emailcontroller = TextEditingController();
@@ -25,8 +27,9 @@ class Logincontroller extends GetxController {
       if (response.statusCode == 202) {
         Get.snackbar("login Sucess", "Congratulations",
             backgroundColor: const Color.fromARGB(255, 191, 228, 192));
-
-        Get.to(const FirstScreen());
+        Get.toNamed(Routes.LOGIN_VIEW);
+        // Get.to(const FirstScreen());
+        // Get.toNamed(Route.)
       } else {
         Get.snackbar("Please try agin", "Not create account",
             backgroundColor: const Color.fromARGB(255, 236, 178, 174));
