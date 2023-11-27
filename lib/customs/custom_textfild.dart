@@ -29,11 +29,11 @@ class CustomTextfild extends StatelessWidget {
         height: 45,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.white,
+            color: const Color(0xFFFFFFFF),
             boxShadow: const [
               BoxShadow(
-                  color: Colors.white,
-                  blurRadius: 1,
+                  color: Color(0xFFFFFFFF),
+                  blurRadius: 0,
                   //blurStyle: BlurStyle.inner,
                   spreadRadius: 1)
             ]),
@@ -42,7 +42,7 @@ class CustomTextfild extends StatelessWidget {
           keyboardType: textInputType,
           decoration: InputDecoration(
               focusColor: focusColor,
-              fillColor: Colors.green,
+              // fillColor: Colors.green,
               //  focusColor: Colors.white,
               // hoverColor: Colors.white,
               hintText: hinText,
@@ -54,13 +54,13 @@ class CustomTextfild extends StatelessWidget {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.0),
                 borderSide: const BorderSide(
-                  color: Colors.white,
+                  color: Color(0xFFFFFFFF),
                   width: 0.0,
                 ),
               ),
               focusedBorder: const OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.white,
+                  color: Color(0xFFFFFFFF),
                 ),
               )),
         ),

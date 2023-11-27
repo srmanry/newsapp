@@ -11,7 +11,8 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFEEF2FD),
+      backgroundColor: const Color(0xFFECECEC),
+      // backgroundColor: const Color(0xFFEEF2FD),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Center(

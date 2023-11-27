@@ -13,6 +13,7 @@ class FirstScreen extends StatelessWidget {
     return DefaultTabController(
       length: 8,
       child: Scaffold(
+        backgroundColor: const Color(0xffECECEC),
         //  drawer: const Drawer(),
         appBar: AppBar(
           // elevation: 100,
@@ -42,7 +43,7 @@ class FirstScreen extends StatelessWidget {
           centerTitle: true,
           //backgroundColor: Colors.white,
           // backgroundColor: Colors.red,
-          backgroundColor: const Color(0xfffeef2fd),
+          //  backgroundColor: const Color(0xfffeef2fd),
           //   backgroundColor: const Color(0xfffF0F7FF),
           title: const Text(
             "ঠাকুরগাঁও বার্তা",

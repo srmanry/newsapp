@@ -14,7 +14,8 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.maxFinite,
-        color: const Color(0xffE4E1E3),
+        color: const Color(0xFFECECEC),
+        // color: const Color(0xffE4E1E3), ECECEC
         //  color: const Color.fromARGB(255, 240, 238, 238),
         //color: const Color(0xFFEEF2FD),
         // color: const Color(0xfffF0F7FF),

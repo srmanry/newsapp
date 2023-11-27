@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:thakurgaonbarta/screens/view/post/ditals_post.dart';
+import 'package:thakurgaonbarta/screens/post/ditals_post.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       // appBar: AppBar(
 
       //   backgroundColor: Colors.red,
@@ -79,7 +80,9 @@ class HomeScreen extends StatelessWidget {
                                 // height: 100,
                                 width: 120,
                                 decoration:
-                                    const BoxDecoration(color: Colors.white),
+                                    //  const BoxDecoration(color: Colors.white),
+                                    const BoxDecoration(
+                                        color: Color(0xFFFFFFFF)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(5),
                                   child: Image.asset(
