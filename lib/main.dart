@@ -12,7 +12,7 @@ import 'routes/app_pages.dart';
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,
-        builder: (context) => MyApp(), // Wrap your app
+        builder: (context) => const MyApp(), // Wrap your app
       ),
     );
 
