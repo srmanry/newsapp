@@ -5,10 +5,12 @@ import 'package:http/http.dart' as http;
 
 class ViewAllcontroller extends GetxController {
   var isloding = false.obs;
+
   viewallpost() async {
     try {
       isloding(true);
-      http.Response response = await http.get(Uri.tryParse("")!);
+      http.Response response = await http.get(Uri.tryParse(
+          "https://blog-api-indol.vercel.app/get_all_random_blogs")!);
       if (response.statusCode == 200) {
         var result = jsonDecode(response.body);
       }

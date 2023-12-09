@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
 import 'package:thakurgaonbarta/screens/post/ditals_post.dart';
+import 'package:thakurgaonbarta/screens/post/view_your_allpost.dart';
 
 import 'customs/drawer_screen.dart';
 
@@ -147,10 +148,10 @@ class FirstScreen extends StatelessWidget {
         body: const TabBarView(children: [
           HomeScreen(),
           HomeScreen(),
+          ViewYourpost(),
+          ViewYourpost(),
           HomeScreen(),
-          HomeScreen(),
-          HomeScreen(),
-          HomeScreen(),
+          ViewYourpost(),
           HomeScreen(),
           HomeScreen(),
         ]),

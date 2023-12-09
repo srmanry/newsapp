@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'dart:convert';
 
+import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,48 +9,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      // appBar: AppBar(
-
-      //   backgroundColor: Colors.red,
-      //   centerTitle: true,
-      //   title: const Text(
-      //     "Thakurgaon Barta",
-      //     style: TextStyle(color: Colors.white),
-      //   ),
-      // ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // SizedBox(
-          //   height: 50,
-          //   child: ListView.builder(
-          //       scrollDirection: Axis.horizontal,
-          //       itemCount: 20,
-          //       itemBuilder: (_, index) {
-          //         return Padding(
-          //           padding: const EdgeInsets.all(8.0),
-          //           child: Container(
-          //               height: 10,
-          //               decoration: BoxDecoration(
-          //                   color: const Color.fromARGB(255, 227, 249, 228),
-          //                   // borderRadius
-          //                   // : BorderRadius.only(
-          //                   //     topLeft: Radius.circular(98),
-          //                   //     bottomLeft: Radius.circular(20))
-          //                   borderRadius: BorderRadius.circular(5)),
-          //               child: const Padding(
-          //                 padding: EdgeInsets.symmetric(horizontal: 8.0),
-          //                 child: Center(
-          //                   child: Text(
-          //                     "Category",
-          //                     style: TextStyle(
-          //                         fontSize: 16, fontWeight: FontWeight.bold),
-          //                   ),
-          //                 ),
-          //               )),
-          //         );
-          //       }),
-          // ),
           Expanded(
               child: ListView.builder(
                   itemCount: 20,
@@ -124,16 +86,6 @@ class HomeScreen extends StatelessWidget {
                                               fontWeight: FontWeight.bold,
                                               fontStyle: FontStyle.italic),
                                         ),
-                                        // TextButton(
-                                        //     onPressed: () {
-                                        //       Get.to(const NewsDitailsScreen());
-                                        //     },
-                                        //     child: const Text(
-                                        //       'Read More',
-                                        //       style: TextStyle(
-                                        //           fontSize: 18,
-                                        //           fontWeight: FontWeight.bold),
-                                        //     )),
                                       ],
                                     )
                                   ],

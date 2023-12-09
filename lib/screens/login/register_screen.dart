@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:thakurgaonbarta/controller/login_controller/register_controller.dart';
 
 import '../../customs/custom_textfild.dart';
-import '../../routes/app_pages.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
