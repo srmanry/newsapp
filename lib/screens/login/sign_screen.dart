@@ -33,16 +33,17 @@ class SignInScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Center(
             child: Form(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+              child: ListView(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                //crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                      // height: 250,
-                      ),
+                    height: 50,
+                  ),
                   Image.asset(
                     "assets/images/login.png",
                     width: 200,
+                    height: 200,
                   ),
                   // const Spacer(),
                   // const Text(
@@ -52,6 +53,16 @@ class SignInScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      "Email",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
                   CustomTextfild(
                     controller: loginContrller.emailcontroller,
                     focusColor: Colors.red,
@@ -60,6 +71,16 @@ class SignInScreen extends StatelessWidget {
                   ),
                   const SizedBox(
                     height: 3.0,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      "Password",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400),
+                    ),
                   ),
                   CustomTextfild(
                     controller: loginContrller.passwordcontroller,

@@ -103,7 +103,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Get.to(const CreatePostscreen());
+                Get.toNamed(Routes.CREATE_POST);
               },
               child: ListTile(
                 // leading: Icon(

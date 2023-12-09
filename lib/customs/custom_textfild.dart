@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomTextfild extends StatelessWidget {
   final TextEditingController? controller;
+  final String? fildname;
   final String? hinText;
   final Widget? prifixIcon;
   final Widget? suffixIcon;
@@ -12,6 +13,7 @@ class CustomTextfild extends StatelessWidget {
 
   const CustomTextfild(
       {super.key,
+      this.fildname,
       this.hinText,
       this.prifixIcon,
       this.suffixIcon,

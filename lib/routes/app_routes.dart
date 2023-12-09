@@ -7,6 +7,7 @@ abstract class Routes {
   static const FRIST_SCREEN = _Paths.FRIST_SCREEN;
   static const LOGIN_VIEW = _Paths.LOGIN_VIEW;
   static const REGISTER_SCREEN = _Paths.REGISTER_SCREEN;
+  static const CREATE_POST = _Paths.CREATE_POST;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const FRIST_SCREEN = "/frist_sceen";
   static const LOGIN_VIEW = '/login_view';
   static const REGISTER_SCREEN = '/register_screen';
+  static const CREATE_POST = "/create_post";
 }
