@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:thakurgaonbarta/routes/app_pages.dart';
+import 'package:thakurgaonbarta/app/routes/app_pages.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
