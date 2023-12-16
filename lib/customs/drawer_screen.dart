@@ -73,7 +73,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Get.toNamed(Routes.LOGIN_VIEW);
+                Get.toNamed(Routes.REGISTER_SCREEN);
               },
               child: ListTile(
                 // leading: Icon(
