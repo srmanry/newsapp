@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:thakurgaonbarta/controller/login_controller/login_controller.dart';
-import 'package:thakurgaonbarta/controller/view_controller/view_all_controller.dart';
+import 'package:thakurgaonbarta/app/controller/login_controller/login_controller.dart';
+import 'package:thakurgaonbarta/app/controller/view_controller/view_all_controller.dart';
 
 import 'package:http/http.dart' as http;
 

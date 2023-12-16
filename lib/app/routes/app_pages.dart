@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/first_screen.dart';
-import 'package:thakurgaonbarta/screens/login/register_screen.dart';
-import 'package:thakurgaonbarta/screens/post/create_postScreen.dart';
-import 'package:thakurgaonbarta/screens/splash_screen.dart';
+import 'package:thakurgaonbarta/app/screens/login/register_screen.dart';
+import 'package:thakurgaonbarta/app/screens/post/create_postScreen.dart';
+import 'package:thakurgaonbarta/app/screens/splash_screen.dart';
 
 import '../screens/login/sign_screen.dart';
 

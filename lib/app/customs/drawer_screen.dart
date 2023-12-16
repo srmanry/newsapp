@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:thakurgaonbarta/routes/app_pages.dart';
+import 'package:thakurgaonbarta/app/routes/app_pages.dart';
 
-import '../screens/login/register_screen.dart';
-import '../screens/login/sign_screen.dart';
-import '../screens/post/create_postScreen.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileScreen extends StatelessWidget {

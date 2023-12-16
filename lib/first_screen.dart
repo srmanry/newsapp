@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
-import 'package:thakurgaonbarta/screens/post/ditals_post.dart';
-import 'package:thakurgaonbarta/screens/post/view_your_allpost.dart';
+import 'package:thakurgaonbarta/app/screens/post/ditals_post.dart';
+import 'package:thakurgaonbarta/app/screens/post/view_your_allpost.dart';
 
-import 'customs/drawer_screen.dart';
+import 'app/customs/drawer_screen.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});

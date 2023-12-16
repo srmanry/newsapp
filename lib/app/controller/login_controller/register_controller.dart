@@ -3,12 +3,23 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:thakurgaonbarta/first_screen.dart';
 
 class RegisterController extends GetxController {
   TextEditingController nameController = TextEditingController();
   TextEditingController gmailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  var selectedImage = Rxn<XFile>();
+
+  Future<void> pickImage() async {
+    final picker = ImagePicker();
+    final pickedImage = await picker.pickImage(source: ImageSource.gallery);
+
+    if (pickedImage != null) {
+      selectedImage.value = pickedImage;
+    }
+  }
 
   void uesrRegisterApi() async {
     try {

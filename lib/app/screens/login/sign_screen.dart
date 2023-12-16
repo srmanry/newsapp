@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:thakurgaonbarta/controller/login_controller/login_controller.dart';
-import 'package:thakurgaonbarta/customs/custom_textfild.dart';
-import 'package:thakurgaonbarta/screens/login/register_screen.dart';
+import 'package:thakurgaonbarta/app/controller/login_controller/login_controller.dart';
+import 'package:thakurgaonbarta/app/customs/custom_textfild.dart';
+import 'package:thakurgaonbarta/app/screens/login/register_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   SignInScreen({super.key});

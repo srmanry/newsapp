@@ -3,9 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
-import 'package:thakurgaonbarta/first_screen.dart';
-import 'package:thakurgaonbarta/routes/app_pages.dart';
-import 'package:thakurgaonbarta/screens/login/register_screen.dart';
+import 'package:thakurgaonbarta/app/routes/app_pages.dart';
 
 class Logincontroller extends GetxController {
   final emailcontroller = TextEditingController();

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:thakurgaonbarta/customs/custom_textfild.dart';
-import 'package:thakurgaonbarta/screens/style/colorstyle.dart';
+import 'package:thakurgaonbarta/app/customs/custom_textfild.dart';
+import 'package:thakurgaonbarta/app/screens/style/colorstyle.dart';
 
-import 'package:thakurgaonbarta/screens/style/textstyle.dart';
+import 'package:thakurgaonbarta/app/screens/style/textstyle.dart';
 
 import '../../customs/custom_bottom.dart';
 
