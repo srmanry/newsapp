@@ -2,7 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_navigation/src/router_report.dart';
 import 'package:thakurgaonbarta/app/controller/login_controller/register_controller.dart';
+import 'package:thakurgaonbarta/app/routes/app_pages.dart';
+import 'package:thakurgaonbarta/app/screens/style/textstyle.dart';
 
 import '../../customs/custom_textfild.dart';
 
@@ -23,12 +26,19 @@ class RegisterScreen extends StatelessWidget {
               // mainAxisAlignment: MainAxisAlignment.center,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
+                const SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Icon(Icons.arrow_back),
+                      InkWell(
+                          onTap: () {
+                            Get.toNamed(Routes.BACK_DRAWER);
+                          },
+                          child: const Icon(Icons.arrow_back)),
                       // SizedBox(
                       //   width: 20,
                       // ),
@@ -36,10 +46,7 @@ class RegisterScreen extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "Register Now",
-                            style: TextStyle(
-                                fontSize: 24,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
+                            style: enhedartext,
                           ),
                         ),
                       ),
@@ -47,13 +54,13 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 150,
+                  height: 50,
                 ),
                 Obx(() {
                   final selectedImage = registerController.selectedImage.value;
                   return selectedImage != null
                       ? SizedBox(
-                          height: 200,
+                          height: 250,
                           width: double.infinity,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(5),
@@ -65,13 +72,26 @@ class RegisterScreen extends StatelessWidget {
                           ),
                         )
                       : Center(
-                          child: TextButton(
-                              onPressed: registerController.pickImage,
-                              child: const Text(
-                                " Import your image ",
-                                style:
-                                    TextStyle(color: Colors.teal, fontSize: 15),
-                              )));
+                          child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/images/camera.png",
+                              height: 80,
+                              fit: BoxFit.cover,
+                            ),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            TextButton(
+                                onPressed: registerController.pickImage,
+                                child: Text(
+                                  " Import your image ",
+                                  style: enbodytext,
+                                )),
+                          ],
+                        ));
                 }),
                 // Stack(
                 //   clipBehavior: Clip.none,
@@ -115,30 +135,22 @@ class RegisterScreen extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    "Name",
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400),
-                  ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Text("Name", style: enbodytext),
                 ),
+
                 CustomTextfild(
                   //focusColor: Colors.red,
                   controller: registerController.nameController,
                   hinText: "name",
                   prifixIcon: const Icon(Icons.person),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
                     "Email",
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400),
+                    style: enbodytext,
                   ),
                 ),
                 Padding(
@@ -150,15 +162,9 @@ class RegisterScreen extends StatelessWidget {
                     prifixIcon: const Icon(Icons.email_outlined),
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    "Password",
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400),
-                  ),
+                  child: Text("Password", style: enbodytext),
                 ),
                 CustomTextfild(
                   controller: registerController.passwordController,
@@ -179,14 +185,10 @@ class RegisterScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: const Color(0xFF13414D)),
-                    child: const Center(
-                        child: Text(
-                      "Register",
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )),
+                    child: Center(
+                        child: Text("Register",
+                            style: enbottontext.copyWith(
+                                color: Colors.white, letterSpacing: 1.5))),
                   ),
                 ),
               ],

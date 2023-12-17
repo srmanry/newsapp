@@ -6,3 +6,10 @@ var bodytext = const TextStyle(
     fontSize: 16, fontWeight: FontWeight.w600, fontFamily: "TiroBangla");
 var bottontext = const TextStyle(
     fontSize: 18, fontWeight: FontWeight.w600, fontFamily: "TiroBangla");
+
+var enhedartext = const TextStyle(
+    fontSize: 24, fontWeight: FontWeight.w600, fontFamily: "Poppins-Regular");
+var enbodytext = const TextStyle(
+    fontSize: 16, fontWeight: FontWeight.w600, fontFamily: "Poppins-Regular");
+var enbottontext = const TextStyle(
+    fontSize: 18, fontWeight: FontWeight.w600, fontFamily: "Poppins-Regular");
