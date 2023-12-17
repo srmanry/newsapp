@@ -93,45 +93,6 @@ class RegisterScreen extends StatelessWidget {
                           ],
                         ));
                 }),
-                // Stack(
-                //   clipBehavior: Clip.none,
-                //   children: [
-                //     Container(
-                //       height: 100,
-                //       width: 100,
-                //       decoration: BoxDecoration(
-                //           borderRadius: BorderRadius.circular(50),
-                //           border: Border.all(width: 1.5, color: Colors.red),
-                //           color: Colors.white),
-                //       // child: const CircleAvatar(
-                //       //   radius: 50,
-                //       //   backgroundColor: Colors.white,
-                //       // ),
-                //     ),
-                //     Positioned(
-                //       top: 40,
-                //       //bottom: 30,
-                //       // right: 10,
-                //       left: 80,
-                //       child: IconButton(
-                //           onPressed: () {},
-                //           icon: const Icon(
-                //             Icons.photo_camera,
-                //             color: Colors.black,
-                //           )),
-                //     )
-                //   ],
-                // ),
-                // const Padding(
-                //   padding: EdgeInsets.all(8.0),
-                //   child: Text(
-                //     "Pick Images",
-                //     style: TextStyle(
-                //         fontSize: 18,
-                //         fontWeight: FontWeight.bold,
-                //         color: Colors.purple),
-                //   ),
-                // ),
                 const SizedBox(
                   height: 10,
                 ),
@@ -139,7 +100,6 @@ class RegisterScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text("Name", style: enbodytext),
                 ),
-
                 CustomTextfild(
                   //focusColor: Colors.red,
                   controller: registerController.nameController,
