@@ -17,21 +17,6 @@ class FirstScreen extends StatelessWidget {
         backgroundColor: const Color(0xffECECEC),
         //  drawer: const Drawer(),
         appBar: AppBar(
-          // elevation: 100,
-          // leading: Builder(
-          //     builder: (context) => IconButton(
-          //         onPressed: () {
-          //            return Scaffold.of(context).openDrawer(
-
-          //            );
-          //           Get.to(const NewsDitailsScreen());
-          //         },
-          //         icon: const Icon(
-          //           Icons.home,
-          //           color: Colors.white,
-          //         ))),
-
-          //*****************************
           leading: IconButton(
               onPressed: () {
                 Get.to(ProfileScreen());
