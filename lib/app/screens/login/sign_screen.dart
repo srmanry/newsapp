@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thakurgaonbarta/app/controller/login_controller/login_controller.dart';
 import 'package:thakurgaonbarta/app/customs/custom_textfild.dart';
 import 'package:thakurgaonbarta/app/screens/login/register_screen.dart';
@@ -120,7 +121,10 @@ class SignInScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: InkWell(
-                      onTap: () {
+                      onTap: () async {
+                        var sharedPref = await SharedPreferences.getInstance();
+                        // sharedPref.setInt(KEYLOD, value)
+                        loginContrller.sharedpreferences();
                         loginContrller.uesrloginApi();
                         print("Login botton");
                       },
