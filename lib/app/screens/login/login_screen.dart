@@ -121,10 +121,10 @@ class SignInScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: InkWell(
-                      onTap: () async {
-                        var sharedPref = await SharedPreferences.getInstance();
+                      onTap: () {
+                        // var sharedPref = await SharedPreferences.getInstance();
                         // sharedPref.setInt(KEYLOD, value)
-                        loginContrller.sharedpreferences();
+                        //loginContrller.sharedpreferences();
                         loginContrller.uesrloginApi();
                         print("Login botton");
                       },
