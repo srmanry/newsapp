@@ -8,6 +8,14 @@ import 'package:thakurgaonbarta/app/routes/app_pages.dart';
 class Logincontroller extends GetxController {
   final emailcontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
+  void validfrom() {
+    if (emailcontroller.text.isEmail && passwordcontroller.text.isEmpty) {
+      Get.snackbar("Please input  Your email", "ldjfj",
+          backgroundColor: const Color.fromARGB(255, 236, 178, 174));
+    } else {
+      print("create your account");
+    }
+  }
 
   void uesrloginApi() async {
     try {

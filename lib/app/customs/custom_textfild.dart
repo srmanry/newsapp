@@ -4,6 +4,7 @@ class CustomTextfild extends StatelessWidget {
   final TextEditingController? controller;
   final String? fildname;
   final String? hinText;
+  final bool? obscureText;
   final Widget? prifixIcon;
   final Widget? suffixIcon;
   final TextInputType? textInputType;
@@ -21,7 +22,8 @@ class CustomTextfild extends StatelessWidget {
       this.textInputType,
       this.obscureCharacter,
       this.outlineborder,
-      this.focusColor});
+      this.focusColor,
+      this.obscureText});
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +42,7 @@ class CustomTextfild extends StatelessWidget {
                   spreadRadius: 1)
             ]),
         child: TextFormField(
+          // obscureText:obscureText,
           controller: controller,
           keyboardType: textInputType,
           decoration: InputDecoration(

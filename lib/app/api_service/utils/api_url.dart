@@ -1,4 +1,5 @@
 String baseUrl = "https://blog-api-indol.vercel.app/";
+// String createUser = "${baseUrl + "user_create";
 String createUser = "$baseUrl/user_create";
 String loginUser = "$baseUrl/login";
 
