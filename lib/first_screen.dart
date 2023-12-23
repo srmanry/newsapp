@@ -4,6 +4,7 @@ import 'package:thakurgaonbarta/home_screen.dart';
 import 'package:thakurgaonbarta/app/screens/post/ditals_post.dart';
 import 'package:thakurgaonbarta/app/screens/post/view_your_allpost.dart';
 
+import 'app/cetagorys/helth.dart';
 import 'app/customs/drawer_screen.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -133,7 +134,7 @@ class FirstScreen extends StatelessWidget {
         ),
         body: const TabBarView(children: [
           HomeScreen(),
-          HomeScreen(),
+          HelthNews(),
           ViewYourpost(),
           ViewYourpost(),
           HomeScreen(),

@@ -37,7 +37,7 @@ class RegisterController extends GetxController {
         Get.snackbar("Register Sucess", "Congratulations",
             backgroundColor: const Color.fromARGB(255, 191, 228, 192));
 
-        Get.to(const FirstScreen());
+        Get.to(FirstScreen());
       } else {
         Get.snackbar("Please try agin", "Not create account",
             backgroundColor: const Color.fromARGB(255, 236, 178, 174));

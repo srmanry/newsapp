@@ -22,17 +22,17 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> whereTogo() async {
-    var sharedPref = await SharedPreferences.getInstance();
+    // var sharedPref = await SharedPreferences.getInstance();
 
-    bool islogin = sharedPref.getBool("islogin") ?? false;
+    // bool islogin = sharedPref.getBool("islogin") ?? false;
     Future.delayed(
       const Duration(seconds: 5),
       () {
-        if (islogin) {
-          Get.offAllNamed(Routes.FRIST_SCREEN);
-        } else {
-          Get.offAllNamed(Routes.LOGIN_VIEW);
-        }
+        // if (islogin) {
+        //   Get.offAllNamed(Routes.FRIST_SCREEN);
+        // } else {
+        //   Get.offAllNamed(Routes.LOGIN_VIEW);
+        // }
       },
     );
   }
