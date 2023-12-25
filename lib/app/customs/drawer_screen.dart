@@ -68,6 +68,7 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
             ),
+
             InkWell(
               onTap: () {
                 Get.toNamed(Routes.REGISTER_SCREEN);

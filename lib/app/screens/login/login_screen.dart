@@ -16,20 +16,6 @@ class SignInScreen extends StatelessWidget {
       body: Container(
         width: double.maxFinite,
         color: const Color(0xFFECECEC),
-        // color: const Color(0xffE4E1E3), ECECEC
-        //  color: const Color.fromARGB(255, 240, 238, 238),
-        //color: const Color(0xFFEEF2FD),
-        // color: const Color(0xfffF0F7FF),
-        // color: Color(0xfffABE5CF),
-        // color: Color(0xfffF0F7FF),
-        //color: Color(0xfffC5E1F6),
-        //color: Color(0xfffE24F96),
-        //color: Color(0xfffEAB1CC),
-        // decoration: const BoxDecoration(
-        //     gradient: LinearGradient(colors: [
-        //   Color.fromARGB(255, 240, 227, 226),
-        //   Colors.white,
-        // ], end: Alignment.topCenter, begin: Alignment.center)),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Center(
