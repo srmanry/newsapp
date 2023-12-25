@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thakurgaonbarta/app/controller/login_controller/login_controller.dart';
 import 'package:thakurgaonbarta/app/customs/custom_textfild.dart';
 import 'package:thakurgaonbarta/app/screens/login/register_screen.dart';
@@ -83,7 +84,6 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
                   CustomTextfild(
-                    obscureText: true,
                     controller: loginContrller.passwordcontroller,
                     hinText: "Password",
                     prifixIcon: const Icon(Icons.visibility),
@@ -122,7 +122,7 @@ class SignInScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: InkWell(
                       onTap: () {
-                        //loginContrller.validfrom();
+                        //loginContrller.validrom();
                         loginContrller.uesrloginApi();
                         print("Login botton");
                       },

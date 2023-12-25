@@ -5,16 +5,16 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'app/routes/app_pages.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
+void main() {
+  runApp(const MyApp());
+}
 
-void main() => runApp(
-      DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => const MyApp(), // Wrap your app
-      ),
-    );
+// void main() => runApp(
+//       DevicePreview(
+//         enabled: !kReleaseMode,
+//         builder: (context) => const MyApp(), // Wrap your app
+//       ),
+//     );
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

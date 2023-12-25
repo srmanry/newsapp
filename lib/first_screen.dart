@@ -7,8 +7,15 @@ import 'package:thakurgaonbarta/app/screens/post/view_your_allpost.dart';
 import 'app/customs/drawer_screen.dart';
 
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
+  FirstScreen({super.key});
 
+  List tablist = [
+    "স্বাস্থ্য",
+    "শিক্ষা",
+    "বিনোদন",
+    "ক্রয়-বিক্রয়",
+    "অন্যান্য",
+  ];
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -17,21 +24,6 @@ class FirstScreen extends StatelessWidget {
         backgroundColor: const Color(0xffECECEC),
         //  drawer: const Drawer(),
         appBar: AppBar(
-          // elevation: 100,
-          // leading: Builder(
-          //     builder: (context) => IconButton(
-          //         onPressed: () {
-          //            return Scaffold.of(context).openDrawer(
-
-          //            );
-          //           Get.to(const NewsDitailsScreen());
-          //         },
-          //         icon: const Icon(
-          //           Icons.home,
-          //           color: Colors.white,
-          //         ))),
-
-          //*****************************
           leading: IconButton(
               onPressed: () {
                 Get.to(ProfileScreen());
@@ -77,7 +69,7 @@ class FirstScreen extends StatelessWidget {
               // indicator: BoxDecoration(
               //     borderRadius: BorderRadius.circular(10),
               //     color: Colors.white),
-              labelColor: Colors.green,
+              labelColor: Colors.teal,
               // indicatorSize:,
               mouseCursor: SystemMouseCursors.allScroll,
               overlayColor: const MaterialStatePropertyAll(Colors.white),
@@ -109,19 +101,7 @@ class FirstScreen extends StatelessWidget {
                 ),
                 Tab(
                   child: Text(
-                    "খেলাধুলা",
-                    style: TextStyle(fontFamily: 'Paapri'),
-                  ),
-                ),
-                Tab(
-                  child: Text(
-                    "ধর্ম",
-                    style: TextStyle(fontFamily: 'Paapri'),
-                  ),
-                ),
-                Tab(
-                  child: Text(
-                    "রাজনীতি",
+                    "বিনোদন",
                     style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
@@ -133,13 +113,19 @@ class FirstScreen extends StatelessWidget {
                 ),
                 Tab(
                   child: Text(
-                    "তথ্য প্রযুক্তি",
+                    "দুর্ঘটনা",
                     style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
                 Tab(
                   child: Text(
-                    "আন্তজাতীক",
+                    "নিয়োগ",
+                    style: TextStyle(fontFamily: 'Paapri'),
+                  ),
+                ),
+                Tab(
+                  child: Text(
+                    "অন্যান্য",
                     style: TextStyle(fontFamily: 'Paapri'),
                   ),
                 ),
