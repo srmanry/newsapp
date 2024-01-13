@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/router_report.dart';
 import 'package:thakurgaonbarta/app/controller/login_controller/register_controller.dart';
 import 'package:thakurgaonbarta/app/routes/app_pages.dart';
 import 'package:thakurgaonbarta/app/screens/style/textstyle.dart';

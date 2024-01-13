@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thakurgaonbarta/app/controller/login_controller/login_controller.dart';
 import 'package:thakurgaonbarta/app/customs/custom_textfild.dart';
 import 'package:thakurgaonbarta/app/screens/login/register_screen.dart';

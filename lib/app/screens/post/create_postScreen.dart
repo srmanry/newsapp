@@ -3,9 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/app/controller/postcontroller/post_controller.dart';
-
-import 'package:thakurgaonbarta/app/screens/style/colorstyle.dart';
-
 import 'package:thakurgaonbarta/app/screens/style/textstyle.dart';
 
 import '../../customs/custom_bottom.dart';

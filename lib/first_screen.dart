@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
-import 'package:thakurgaonbarta/app/screens/post/ditals_post.dart';
 import 'package:thakurgaonbarta/app/screens/post/view_your_allpost.dart';
 
 import 'app/cetagorys/helth.dart';
