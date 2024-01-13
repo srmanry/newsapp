@@ -58,6 +58,7 @@ class FirstScreen extends StatelessWidget {
             )
           ],
           bottom: TabBar(
+              indicatorPadding: EdgeInsets.zero,
               splashBorderRadius: BorderRadius.circular(
                 20,
               ),
@@ -73,7 +74,7 @@ class FirstScreen extends StatelessWidget {
               labelColor: Colors.teal,
               // indicatorSize:,
               mouseCursor: SystemMouseCursors.allScroll,
-              overlayColor: const MaterialStatePropertyAll(Colors.white),
+              //overlayColor: const MaterialStatePropertyAll(Colors.white),
               //indicatorWeight: 10.0,
               // splashFactory: NoSplash.splashFactory,
               //labelPadding: EdgeInsets.all(1),
@@ -135,10 +136,13 @@ class FirstScreen extends StatelessWidget {
         body: const TabBarView(children: [
           HomeScreen(),
           HelthNews(),
-          ViewYourpost(),
-          ViewYourpost(),
+          // ViewYourpost(),
+          //ViewYourpost(),
           HomeScreen(),
-          ViewYourpost(),
+          //ViewYourpost(),
+          HomeScreen(),
+          HomeScreen(),
+          HomeScreen(),
           HomeScreen(),
           HomeScreen(),
         ]),

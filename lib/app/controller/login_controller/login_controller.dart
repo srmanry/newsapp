@@ -2,48 +2,44 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:thakurgaonbarta/app/ripo/login_ripo.dart';
 import 'package:thakurgaonbarta/app/routes/app_pages.dart';
 
 class Logincontroller extends GetxController {
   final emailcontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
+  var isloading = false.obs;
+  AuthRepo authRepo = Get.put(AuthRepo());
 
   void uesrloginApi() async {
     try {
-      final response = await post(
-        Uri.parse("https://blog-api-indol.vercel.app/login"),
-        body: {
-          "username": emailcontroller.value.text,
-          "password": passwordcontroller.value.text,
-        },
-      );
-      var data = jsonDecode(response.body);
-      print(response.statusCode);
+      var response = await authRepo.loginRepo(
+          email: emailcontroller.text.trim(),
+          password: passwordcontroller.text);
 
-      print(response);
-      if (response.statusCode == 202) {
-        SharedPreferences sharedPreferences =
-            await SharedPreferences.getInstance();
-        String accessToken = data["access_token"];
-        print(accessToken);
-        await sharedPreferences.setString("token", accessToken);
+      if (response != null) {
+        var data = jsonDecode(response.body);
 
-        //String gettoken =  sharedPreferences.getString("token")??"";
-        await sharedPreferences.setBool("islogin", true);
+        if (response.statusCode == 202) {
+          SharedPreferences sharedPreferences =
+              await SharedPreferences.getInstance();
+          String accessToken = data["access_token"];
+          print(accessToken);
+          await sharedPreferences.setString("token", accessToken);
 
-        Get.snackbar("login Sucess", "Congratulations",
-            backgroundColor: const Color.fromARGB(255, 191, 228, 192));
-        Get.offAllNamed(Routes.FRIST_SCREEN);
-        // Get.to(const FirstScreen());
-        // Get.toNamed(Route.)
-      } else {
-        Get.snackbar("Please try agin", "Not create account",
-            backgroundColor: const Color.fromARGB(255, 236, 178, 174));
+          //String gettoken =  sharedPreferences.getString("token")??"";
+          await sharedPreferences.setBool("islogin", true);
+
+          Get.snackbar("login Sucess", "Congratulations",
+              backgroundColor: const Color.fromARGB(255, 191, 228, 192));
+          Get.offAllNamed(Routes.FRIST_SCREEN);
+        } else {
+          print(response.statusCode);
+          Get.snackbar("Please try agin", "Not create account",
+              backgroundColor: const Color.fromARGB(255, 236, 178, 174));
+        }
       }
-
-      {}
     } catch (e) {
       Get.snackbar("Please try agin", "Have a problem",
           backgroundColor: const Color.fromARGB(255, 236, 178, 174));

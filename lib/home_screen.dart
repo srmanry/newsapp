@@ -3,109 +3,135 @@ import 'package:get/get.dart';
 
 import 'package:thakurgaonbarta/app/screens/post/ditals_post.dart';
 
+import 'app/screens/style/textstyle.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-              child: ListView.builder(
-                  itemCount: 20,
-                  itemBuilder: (_, index) {
-                    return InkWell(
-                      onTap: () {
-                        Get.to(const NewsDitailsScreen());
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 8.0),
-                        child: Container(
+        backgroundColor: Colors.grey[200],
+        body: ListView.builder(
+            itemCount: 20,
+            itemBuilder: (_, index) {
+              return Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
                           decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(5),
-                              //shape: BoxShape.circle
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color(0xffDDDDDD),
-                                  blurRadius: 6.0,
-                                  spreadRadius: 2.0,
-                                  offset: Offset(0.0, 0.0),
-                                ),
-                              ]),
-                          height: 100,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Container(
-                                  // height: 100,
-                                  width: 120,
-                                  decoration:
-                                      //  const BoxDecoration(color: Colors.white),
-                                      const BoxDecoration(
-                                          color: Color(0xFFFFFFFF)),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(5),
-                                    child: Image.asset(
-                                      'assets/images/hortal.jpg',
-                                      //height: 150,
-                                      // fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                const Expanded(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                            top: 8.0, bottom: 10.0),
-                                        child: Text(
-                                          "বিভিন্ন জেলায় এসব যানবাহনে অগ্নিসংযোগ করা হয়",
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: "TiroBangla",
-                                            letterSpacing: 1.5,
-                                            // fontFamily: "NotoSansBengali",
-                                          ),
-                                        ),
-                                      ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            "10/02/2024",
-                                            style: TextStyle(
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.bold,
-                                                fontStyle: FontStyle.italic),
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ],
+                              borderRadius: BorderRadius.circular(20),
+                              border:
+                                  Border.all(width: 1, color: Colors.black)),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset(
+                              "assets/images/i.jpeg",
+                              fit: BoxFit.cover,
                             ),
                           ),
                         ),
-                      ),
-                    );
-                  }))
-        ],
-      ),
-    );
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "User Name",
+                                    style: bodytext,
+                                  ),
+                                  Text(
+                                    "1/2/2024",
+                                    style: bodytext,
+                                  ),
+                                ],
+                              ),
+                              InkWell(
+                                  onTap: () {
+                                    Get.defaultDialog(
+                                        title:
+                                            "আপনি কি ডিলিট বা আপডেট করতে চান",
+                                        content: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Column(
+                                              children: [
+                                                IconButton(
+                                                    onPressed: () {},
+                                                    icon:
+                                                        const Icon(Icons.edit)),
+                                                Text("এডিট"),
+                                              ],
+                                            ),
+                                            Column(
+                                              children: [
+                                                IconButton(
+                                                    onPressed: () {},
+                                                    icon: const Icon(
+                                                        Icons.delete)),
+                                                Text("মুছুন"),
+                                              ],
+                                            ),
+                                          ],
+                                        ));
+                                  },
+                                  child: const Icon(Icons.more_vert))
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "বাংলাদেশ দক্ষিণ এশিয়ার একটি সার্বভৌম রাষ্ট্র",
+                      style: bodytext,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      child: Image.asset("assets/images/ban.jpg"),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        // Icon(Icons.visibility),
+                        const Row(
+                          children: [
+                            Icon(Icons.favorite_border),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text("25"),
+                          ],
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Get.to(const NewsDitailsScreen());
+                          },
+                          child: Text(
+                            "Rede more",
+                            style: bodytext,
+                          ),
+                        ),
+                        //Icon(Icons.arrow_forward),
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            }));
   }
 }
