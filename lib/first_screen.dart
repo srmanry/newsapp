@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
-import 'package:thakurgaonbarta/app/screens/post/view_your_allpost.dart';
 
 import 'app/cetagorys/helth.dart';
 import 'app/customs/drawer_screen.dart';
 
 class FirstScreen extends StatelessWidget {
   FirstScreen({super.key});
+  var tabfontstyle = const TextStyle(fontFamily: 'Paapri');
 
   List tablist = [
     "স্বাস্থ্য",
@@ -19,7 +19,7 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 8,
+      length: 7,
       child: Scaffold(
         backgroundColor: const Color(0xffECECEC),
         //  drawer: const Drawer(),
@@ -57,6 +57,7 @@ class FirstScreen extends StatelessWidget {
             )
           ],
           bottom: TabBar(
+              indicatorPadding: EdgeInsets.zero,
               splashBorderRadius: BorderRadius.circular(
                 20,
               ),
@@ -72,7 +73,7 @@ class FirstScreen extends StatelessWidget {
               labelColor: Colors.teal,
               // indicatorSize:,
               mouseCursor: SystemMouseCursors.allScroll,
-              overlayColor: const MaterialStatePropertyAll(Colors.white),
+              //overlayColor: const MaterialStatePropertyAll(Colors.white),
               //indicatorWeight: 10.0,
               // splashFactory: NoSplash.splashFactory,
               //labelPadding: EdgeInsets.all(1),
@@ -86,47 +87,47 @@ class FirstScreen extends StatelessWidget {
               unselectedLabelColor: Colors.black,
               automaticIndicatorColorAdjustment: true,
               isScrollable: true,
-              tabs: const [
+              tabs: [
                 Tab(
                   child: Text(
                     "স্বাস্থ্য",
-                    style: TextStyle(fontFamily: 'Paapri'),
+                    style: tabfontstyle,
                   ),
                 ),
                 Tab(
                   child: Text(
                     "শিক্ষা",
-                    style: TextStyle(fontFamily: 'Paapri'),
+                    style: tabfontstyle,
                   ),
                 ),
                 Tab(
                   child: Text(
                     "বিনোদন",
-                    style: TextStyle(fontFamily: 'Paapri'),
+                    style: tabfontstyle,
                   ),
                 ),
                 Tab(
                   child: Text(
                     "ক্রয় বিক্রয়",
-                    style: TextStyle(fontFamily: 'Paapri'),
+                    style: tabfontstyle,
                   ),
                 ),
                 Tab(
                   child: Text(
                     "দুর্ঘটনা",
-                    style: TextStyle(fontFamily: 'Paapri'),
+                    style: tabfontstyle,
                   ),
                 ),
                 Tab(
                   child: Text(
                     "নিয়োগ",
-                    style: TextStyle(fontFamily: 'Paapri'),
+                    style: tabfontstyle,
                   ),
                 ),
                 Tab(
                   child: Text(
                     "অন্যান্য",
-                    style: TextStyle(fontFamily: 'Paapri'),
+                    style: tabfontstyle,
                   ),
                 ),
               ]),
@@ -134,10 +135,12 @@ class FirstScreen extends StatelessWidget {
         body: const TabBarView(children: [
           HomeScreen(),
           HelthNews(),
-          ViewYourpost(),
-          ViewYourpost(),
+          // ViewYourpost(),
+          //ViewYourpost(),
           HomeScreen(),
-          ViewYourpost(),
+          //ViewYourpost(),
+          HomeScreen(),
+          HomeScreen(),
           HomeScreen(),
           HomeScreen(),
         ]),

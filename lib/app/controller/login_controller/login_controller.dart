@@ -4,36 +4,40 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:thakurgaonbarta/first_screen.dart';
+import 'package:thakurgaonbarta/app/routes/app_pages.dart';
 
 class Logincontroller extends GetxController {
   final emailcontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
-  void validfrom() {
-    if (emailcontroller.text.isEmail && passwordcontroller.text.isEmpty) {
-      Get.snackbar("Please input  Your email", "ldjfj",
-          backgroundColor: const Color.fromARGB(255, 236, 178, 174));
-    } else {
-      print("create your account");
-    }
-  }
 
   void uesrloginApi() async {
     try {
       final response = await post(
-        Uri.parse("https://blog-api-indol.vercel.app/user_create"),
+        Uri.parse("https://blog-api-indol.vercel.app/login"),
         body: {
-          "email": emailcontroller.value.text,
+          "username": emailcontroller.value.text,
           "password": passwordcontroller.value.text,
         },
       );
       var data = jsonDecode(response.body);
+      print(response.statusCode);
 
-      if (response.statusCode == 201) {
+      print(response);
+      if (response.statusCode == 202) {
+        SharedPreferences sharedPreferences =
+            await SharedPreferences.getInstance();
+        String accessToken = data["access_token"];
+        print(accessToken);
+        await sharedPreferences.setString("token", accessToken);
+
+        //String gettoken =  sharedPreferences.getString("token")??"";
+        await sharedPreferences.setBool("islogin", true);
+
         Get.snackbar("login Sucess", "Congratulations",
             backgroundColor: const Color.fromARGB(255, 191, 228, 192));
-
-        Get.to(FirstScreen());
+        Get.offAllNamed(Routes.FRIST_SCREEN);
+        // Get.to(const FirstScreen());
+        // Get.toNamed(Route.)
       } else {
         Get.snackbar("Please try agin", "Not create account",
             backgroundColor: const Color.fromARGB(255, 236, 178, 174));

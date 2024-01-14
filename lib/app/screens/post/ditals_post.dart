@@ -50,27 +50,27 @@ class NewsDitailsScreen extends StatelessWidget {
               height: 10,
             ),
 
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: cr,
-              children: [
-                Text(
-                  '10/02/2023',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic),
-                ),
-                Text(
-                  "রিপোটার : রাসেদ গাজী",
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.red),
-                )
-              ],
-            ),
+            // const Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   // crossAxisAlignment: cr,
+            //   children: [
+            //     Text(
+            //       '10/02/2023',
+            //       style: TextStyle(
+            //           fontSize: 16,
+            //           fontWeight: FontWeight.bold,
+            //           fontStyle: FontStyle.italic),
+            //     ),
+            //     Text(
+            //       "রিপোটার : রাসেদ গাজী",
+            //       style: TextStyle(
+            //           fontSize: 18,
+            //           fontWeight: FontWeight.bold,
+            //           fontStyle: FontStyle.italic,
+            //           color: Colors.red),
+            //     )
+            //   ],
+            // ),
             // const Divider(
             //   color: Colors.black,
             // )

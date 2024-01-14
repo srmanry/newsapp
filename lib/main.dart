@@ -2,7 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:thakurgaonbarta/app/screens/drop_down.dart';
+import 'package:thakurgaonbarta/first_screen.dart';
 
 import 'app/routes/app_pages.dart';
 
@@ -26,15 +26,15 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      initialRoute: AppPages.INITIAL,
-      getPages: AppPages.routes,
+      // initialRoute: AppPages.INITIAL,
+      // getPages: AppPages.routes,
       theme: ThemeData(
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       //: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: const DropdownScreen(),
-      //  home: const FirstScreen(),
+      //home: const HomeScreen(),
+      home: FirstScreen(),
     );
   }
 }

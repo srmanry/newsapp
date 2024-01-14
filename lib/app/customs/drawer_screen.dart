@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/app/routes/app_pages.dart';
+import 'package:thakurgaonbarta/home_screen.dart';
 
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -114,14 +115,19 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            ListTile(
-              // leading: Icon(
-              //   Icons.login,
-              //   color: Colors.red,
-              // ),
-              title: Text(
-                "View all post",
-                style: listTextstyle,
+            InkWell(
+              onTap: () {
+                Get.to(const HomeScreen());
+              },
+              child: ListTile(
+                // leading: Icon(
+                //   Icons.login,
+                //   color: Colors.red,
+                // ),
+                title: Text(
+                  "View all post",
+                  style: listTextstyle,
+                ),
               ),
             ),
             // const ListTile(
