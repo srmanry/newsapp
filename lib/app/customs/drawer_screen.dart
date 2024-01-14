@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thakurgaonbarta/app/routes/app_pages.dart';
+import 'package:thakurgaonbarta/app/screens/login/login_screen.dart';
+import 'package:thakurgaonbarta/app/screens/login/register_screen.dart';
 import 'package:thakurgaonbarta/home_screen.dart';
 
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -87,7 +89,8 @@ class ProfileScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Get.toNamed(Routes.LOGIN_VIEW);
+                Get.to(SignInScreen());
+                // Get.toNamed(Routes.LOGIN_VIEW);
               },
               child: ListTile(
                 // leading: Icon(
@@ -102,7 +105,8 @@ class ProfileScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Get.toNamed(Routes.CREATE_POST);
+                Get.to(RegisterScreen());
+                //  Get.toNamed(Routes.CREATE_POST);
               },
               child: ListTile(
                 // leading: Icon(

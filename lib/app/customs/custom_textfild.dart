@@ -12,18 +12,19 @@ class CustomTextfild extends StatelessWidget {
   final Color? focusColor;
   final Widget? outlineborder;
 
-  const CustomTextfild(
-      {super.key,
-      this.fildname,
-      this.hinText,
-      this.prifixIcon,
-      this.suffixIcon,
-      this.controller,
-      this.textInputType,
-      this.obscureCharacter,
-      this.outlineborder,
-      this.focusColor,
-      this.obscureText});
+  const CustomTextfild({
+    super.key,
+    this.fildname,
+    this.hinText,
+    this.prifixIcon,
+    this.suffixIcon,
+    this.controller,
+    this.textInputType,
+    this.obscureCharacter,
+    this.outlineborder,
+    this.focusColor,
+    this.obscureText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,7 @@ class CustomTextfild extends StatelessWidget {
                   spreadRadius: 1)
             ]),
         child: TextFormField(
-          // obscureText:obscureText,
+          // obscureText: obscureText,
           controller: controller,
           keyboardType: textInputType,
           decoration: InputDecoration(

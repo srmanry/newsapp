@@ -4,11 +4,21 @@ import 'package:thakurgaonbarta/app/controller/login_controller/login_controller
 import 'package:thakurgaonbarta/app/customs/custom_textfild.dart';
 import 'package:thakurgaonbarta/app/screens/login/register_screen.dart';
 
-class SignInScreen extends StatelessWidget {
+class SignInScreen extends StatefulWidget {
   SignInScreen({super.key});
+
+  @override
+  State<SignInScreen> createState() => _SignInScreenState();
+}
+
+class _SignInScreenState extends State<SignInScreen> {
   var textStyle = const TextStyle(
       fontSize: 18, fontWeight: FontWeight.bold, color: Colors.red);
+
+  var passwordhide = true;
+
   Logincontroller loginContrller = Get.put(Logincontroller());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,11 +78,50 @@ class SignInScreen extends StatelessWidget {
                           fontWeight: FontWeight.w400),
                     ),
                   ),
-                  CustomTextfild(
-                    controller: loginContrller.passwordcontroller,
-                    hinText: "Password",
-                    prifixIcon: const Icon(Icons.visibility),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: const Color(0xFFFFFFFF),
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Color(0xFFFFFFFF),
+                                blurRadius: 0,
+                                //blurStyle: BlurStyle.inner,
+                                spreadRadius: 1)
+                          ]),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: const BorderSide(
+                                color: Color(0xFFFFFFFF),
+                                width: 0.0,
+                              ),
+                            ),
+                            focusedBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFFFFFFFF),
+                              ),
+                            ),
+                            hintText: "Password",
+                            prefixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    passwordhide = !passwordhide;
+                                  });
+                                },
+                                icon: passwordhide
+                                    ? const Icon(Icons.visibility_off)
+                                    : const Icon(Icons.visibility))),
+                        obscureText: passwordhide,
+                      ),
+                    ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
@@ -96,7 +145,7 @@ class SignInScreen extends StatelessWidget {
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -137,3 +186,9 @@ class SignInScreen extends StatelessWidget {
     );
   }
 }
+
+// void visibilityicon(){
+//   if (passwordhide){
+//         return Icon
+//        }
+// }
